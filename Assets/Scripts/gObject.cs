@@ -11,7 +11,7 @@ public class gObject : MonoBehaviour
 
     public bool active;
 
-    public bool Intake;
+    
 
 
     public 
