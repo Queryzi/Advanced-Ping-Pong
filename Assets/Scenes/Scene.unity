@@ -3115,11 +3115,11 @@ PrefabInstance:
     - target: {fileID: 8193894863877154479, guid: ca91a8b9f16019048a161c35d8fb84ff, type: 3}
       propertyPath: itemTemplates.Array.data[0].gameObject
       value: 
-      objectReference: {fileID: 8324120652657024701, guid: ad00f9ce7fa424986bc4f73af3cd7649, type: 3}
+      objectReference: {fileID: 5679191387347766934, guid: f3964739ce3fcbf4fbf4a7f97b548df0, type: 3}
     - target: {fileID: 8193894863877154479, guid: ca91a8b9f16019048a161c35d8fb84ff, type: 3}
       propertyPath: itemTemplates.Array.data[1].gameObject
       value: 
-      objectReference: {fileID: 5679191387347766934, guid: f3964739ce3fcbf4fbf4a7f97b548df0, type: 3}
+      objectReference: {fileID: 8324120652657024701, guid: ad00f9ce7fa424986bc4f73af3cd7649, type: 3}
     - target: {fileID: 8193894863877154479, guid: ca91a8b9f16019048a161c35d8fb84ff, type: 3}
       propertyPath: itemTemplates.Array.data[2].gameObject
       value: 
