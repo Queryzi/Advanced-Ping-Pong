@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 244016907}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1462,6 +1462,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -107363118203838627, guid: e2324efacc2bb9aaa847ea547fde93e9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1221766900564063628, guid: e2324efacc2bb9aaa847ea547fde93e9, type: 3}
       propertyPath: m_Name
       value: WhirlWind
@@ -2209,7 +2213,7 @@ GameObject:
   - component: {fileID: 1553865049}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
