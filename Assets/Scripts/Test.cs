@@ -9,7 +9,7 @@ public class Test : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = new Vector2(2,10);
+        rb.linearVelocity = new Vector2(10,0);
     }
 
     // Update is called once per frame
