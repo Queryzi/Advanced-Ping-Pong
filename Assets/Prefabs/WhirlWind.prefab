@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2841755064668602665}
   - component: {fileID: 7226488589487928069}
-  - component: {fileID: 9072800526296883871}
   - component: {fileID: 7939642166207205344}
+  - component: {fileID: -107363118203838627}
   m_Layer: 0
   m_Name: WhirlWind
   m_TagString: Untagged
@@ -94,8 +94,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!58 &9072800526296883871
-CircleCollider2D:
+--- !u!114 &7939642166207205344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221766900564063628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cd624e24e563f109ca2c89c550e027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Whirlwind
+  minAngle: -90
+  maxAngle: 90
+  minSpeed: 4
+  maxSpeed: 12
+--- !u!61 &-107363118203838627
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,25 +140,19 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &7939642166207205344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221766900564063628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6cd624e24e563f109ca2c89c550e027, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Whirlwind
-  minAngle: -90
-  maxAngle: 90
-  minSpeed: 4
-  maxSpeed: 12
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.91360456, y: 0.85920906}
+  m_EdgeRadius: 0

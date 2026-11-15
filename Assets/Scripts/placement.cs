@@ -1,7 +1,7 @@
 using System;
+
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
+
 
 public class placement : MonoBehaviour
 {
@@ -34,6 +34,16 @@ public class placement : MonoBehaviour
 
     public Vector2 portalSpawnLocation;
 
+    public Keybinds keys;
+
+    public float xUpperBound;
+
+    public float xLowerBound;
+
+    public float yUpperBound;
+
+    public float yLowerBound;
+
     
     //public Color color;
 
@@ -50,7 +60,7 @@ public class placement : MonoBehaviour
     {
 
 
-        if(Input.GetKeyDown(KeyCode.F) && inHold == false)
+        if(Input.GetKeyDown(keys.useItem) && inHold == false)
             {
                 
                 
@@ -86,9 +96,37 @@ public class placement : MonoBehaviour
             }
         else if(inHold)
         {
+
+            if(transform.position.y>yUpperBound)
+            {
+                transform.position = new Vector2(transform.position.x, yUpperBound);
+            }
+            if(transform.position.y<yLowerBound)
+            {
+                transform.position = new Vector2(transform.position.x, yLowerBound);
+            }
+            if(transform.position.x>xUpperBound)
+            {
+                transform.position = new Vector2(xLowerBound, transform.position.y);
+            }
+            if(transform.position.x<xLowerBound)
+            {
+                transform.position = new Vector2(xUpperBound, transform.position.y);
+            }
+            float hori;
+            float vert;
                 Debug.Log("is in hold");
-                float hori = Input.GetAxis("Horizontal");
-                float vert = Input.GetAxis("Vertical");
+                if(keys.name == "Player 2")
+            {
+                hori = Input.GetAxis("Player2Horizontal");
+                vert = Input.GetAxis("Player2Vertical");
+            }
+
+            else
+            {
+                hori = Input.GetAxis("Horizontal");
+                vert = Input.GetAxis("Vertical");
+            }
                 Debug.Log(hori);
                 activeObject.transform.position += new Vector3(hori*speed* Time.deltaTime,vert*speed*Time.deltaTime);
                 if(activeOption ==0)
@@ -97,18 +135,18 @@ public class placement : MonoBehaviour
             }
             if(activeOption==1)
             {
-                if(Input.GetKeyDown(KeyCode.G))
+                if(Input.GetKeyDown(keys.rotateItem))
                 {
                     activeObject.transform.Rotate(0,0,90);
                 }
             }
-            if(Input.GetKeyDown(KeyCode.F))
+            if(Input.GetKeyDown(keys.useItem))
             {
                 inHold = false;
                 activeBC.enabled = true;
                 activeSR.color = basicColor;
                 
-                if(activeOption ==0)
+                if(activeOption == 0)
             {
                activeBC2.enabled = true;
                 activeSR2.color = basicColor;
@@ -116,6 +154,30 @@ public class placement : MonoBehaviour
                 
 
             }
+
+            Transform obPos = activeObject.transform;
+            
+            for (int i = 0; i < 2; i++)
+            {
+               if(obPos.position.y>yUpperBound)
+            {
+                obPos.position = new Vector2(obPos.position.x, yUpperBound);
+            }
+            if(obPos.position.y<yLowerBound)
+            {
+               obPos.position = new Vector2(obPos.position.x, yLowerBound);
+            }
+            if(obPos.position.x>xUpperBound)
+            {
+                obPos.position = new Vector2(xLowerBound, obPos.position.y);
+            }
+            if(obPos.position.x<xLowerBound)
+            {
+                obPos.position = new Vector2(xUpperBound, obPos.position.y);
+            } 
+            obPos = activeObject2.transform;
+            }
+            
         }
     }
 }
