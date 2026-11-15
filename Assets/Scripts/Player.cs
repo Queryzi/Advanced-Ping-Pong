@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
     {
 
         float hori = Input.GetAxisRaw("Horizontal");
-        transform.position += new Vector3(hori*speed*Time.deltaTime, 0);
+        
+
         
     }
 }
