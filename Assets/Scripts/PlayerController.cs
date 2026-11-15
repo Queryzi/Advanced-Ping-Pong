@@ -29,10 +29,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(KeyCode.UpArrow)) y++;
-            if (Input.GetKey(KeyCode.DownArrow)) y--;
-            if (debugMode && Input.GetKey(KeyCode.LeftArrow)) x--;
-            if (debugMode && Input.GetKey(KeyCode.RightArrow)) x++;
+            if (Input.GetKey(KeyCode.O)) y++;
+            if (Input.GetKey(KeyCode.L)) y--;
+            if (debugMode && Input.GetKey(KeyCode.K)) x--;
+            if (debugMode && Input.GetKey(KeyCode.Semicolon)) x++;
         }
 
         movement = new Vector2(x, y).normalized;
