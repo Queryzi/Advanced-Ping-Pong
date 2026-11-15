@@ -39,9 +39,10 @@ public class placement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F) && inHold == false)
             {
-
-                activeObject.transform.position = spawnLocation;
+                
                activeObject.SetActive(true);
+                activeObject.transform.position = spawnLocation;
+
                activeBC = activeObject.GetComponent<BoxCollider2D>();
                activeSR =  activeObject.GetComponent<SpriteRenderer>();
 
@@ -52,7 +53,7 @@ public class placement : MonoBehaviour
             }
         if(inHold)
         {
-            
+                Debug.Log("is in hold");
                 float hori = Input.GetAxisRaw("Horizontal");
                 float vert = Input.GetAxisRaw("Vertical");
                 activeObject.transform.position += new Vector3(hori*speed* Time.deltaTime,vert*speed*Time.deltaTime);
