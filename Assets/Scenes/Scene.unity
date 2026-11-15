@@ -709,7 +709,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
+  m_Sprite: {fileID: -3603556060819865620, guid: d3b658e3dd6a1584e82198aaf9fd68a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -980,7 +980,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1064,7 +1064,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3603556060819865620, guid: d3b658e3dd6a1584e82198aaf9fd68a4, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1529,7 +1529,7 @@ PrefabInstance:
     - target: {fileID: 4220855561674414633, guid: f3964739ce3fcbf4fbf4a7f97b548df0, type: 3}
       propertyPath: twinPortal
       value: 
-      objectReference: {fileID: 1652599397}
+      objectReference: {fileID: 0}
     - target: {fileID: 5679191387347766934, guid: f3964739ce3fcbf4fbf4a7f97b548df0, type: 3}
       propertyPath: m_Name
       value: portal
@@ -1548,3 +1548,5 @@ SceneRoots:
   - {fileID: 244016906}
   - {fileID: 901654222}
   - {fileID: 926382899}
+  - {fileID: 1901920589}
+  - {fileID: 1329399166804407729}
