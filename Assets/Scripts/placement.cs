@@ -36,6 +36,8 @@ public class placement : MonoBehaviour
 
     public Keybinds keys;
 
+    public HotbarManager hotbarManager;
+
     public float xUpperBound;
 
     public float xLowerBound;
@@ -44,6 +46,10 @@ public class placement : MonoBehaviour
 
     public float yLowerBound;
 
+    public KeyCode storedKey;
+
+
+    
     
     //public Color color;
 
@@ -60,11 +66,54 @@ public class placement : MonoBehaviour
     {
 
 
-        if(Input.GetKeyDown(keys.useItem) && inHold == false)
+        if((Input.GetKeyDown(keys.useItem1) || Input.GetKeyDown(keys.useItem2) || Input.GetKeyDown(keys.useItem3) ) && inHold == false)
             {
                 
+                activeOption = -1;
+                int SelectedItem = -1;
+
+                if(Input.GetKeyDown(keys.useItem1)) 
+                { 
+                    SelectedItem = 0;
+                    storedKey = keys.useItem1;
+                    
+
+                    
+                }
+
+                if(Input.GetKeyDown(keys.useItem2)) 
+                { 
+                     SelectedItem = 1;
+                     storedKey = keys.useItem2;
                 
-                activeObject = Instantiate(options[activeOption],spawnLocation,transform.rotation);
+                }
+
+                if(Input.GetKeyDown(keys.useItem3))
+            {
+                 SelectedItem = 2;
+                 storedKey = keys.useItem3;
+            }
+
+
+                //Debug.Log("Item " + hotbarManager.hotBarItems[0]);
+                activeObject = Instantiate(hotbarManager.hotBarItems[SelectedItem].gameObject,spawnLocation,transform.rotation);
+
+                    if(hotbarManager.hotBarItems[SelectedItem].name == "Portal")
+            {
+                activeOption = 0;
+                Debug.Log("Item 0");
+            }
+                 if(hotbarManager.hotBarItems[SelectedItem].name == "Wall")
+            {
+                activeOption = 1;
+            }
+                    hotbarManager.hotBarItems.RemoveAt(SelectedItem);
+                    
+                hotbarManager.UpdateHotbar();
+
+            Debug.Log(SelectedItem);
+            
+                //activeObject = Instantiate(options[activeOption],spawnLocation,transform.rotation);
                
                 
                activeObject.SetActive(true);
@@ -78,7 +127,7 @@ public class placement : MonoBehaviour
 
                 if(activeOption == 0)
                 {
-                activeObject2 = Instantiate(options[activeOption],spawnLocation,transform.rotation);
+                activeObject2 = Instantiate(activeObject,spawnLocation,transform.rotation);
 
                 activeObject.GetComponent<Portal>().twinPortal = activeObject2;
                 activeObject2.GetComponent<Portal>().twinPortal = activeObject;
@@ -140,7 +189,7 @@ public class placement : MonoBehaviour
                     activeObject.transform.Rotate(0,0,90);
                 }
             }
-            if(Input.GetKeyDown(keys.useItem))
+            if(Input.GetKeyDown(storedKey))
             {
                 inHold = false;
                 activeBC.enabled = true;
