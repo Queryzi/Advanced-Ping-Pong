@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -12,6 +11,8 @@ public class GoalManager : MonoBehaviour
     public int score;
 
     public TMP_Text scoreText;
+
+    public HotbarManager hotbarManager;
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,6 +35,7 @@ public class GoalManager : MonoBehaviour
         if(col.TryGetComponent(out BallController ball))
         {
             ball.ResetBall();
+            hotbarManager.AddRandomItem();
         }
 
     }
