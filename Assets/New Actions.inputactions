@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "New Actions",
+    "maps": [
+        {
+            "name": "Player 1",
+            "id": "a238aeca-516b-482b-a5f8-37f96b7f589b",
+            "actions": [
+                {
+                    "name": "Right",
+                    "type": "Button",
+                    "id": "7c372532-11c7-44e2-9112-881f2b5d2565",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "04d6736a-d2dc-4e03-8976-2955f013e962",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "45ad7c03-0087-4f1b-9cfc-7f0637c692b8",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf6a7c26-ac7f-4467-8034-d82b7b83c2a1",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
