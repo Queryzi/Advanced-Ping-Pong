@@ -1,3 +1,4 @@
+using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class Whirlwind : MonoBehaviour
@@ -12,8 +13,11 @@ public class Whirlwind : MonoBehaviour
         BallController ball = other.GetComponent<BallController>();
 
         if (ball != null)
+        
         {
+
             Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
+            Debug.Log("Vel:" + rb.linearVelocity);
 
             float angle = Random.Range(minAngle, maxAngle);
 
@@ -32,9 +36,11 @@ public class Whirlwind : MonoBehaviour
                 speed *= 0.75f;
             }
             
-            speed = Mathf.Clamp(speed, minSpeed, maxSpeed);
+            // speed = Mathf.Clamp(speed, minSpeed, maxSpeed);
 
             rb.linearVelocity = direction * speed;
+
+            Debug.Log(" out Vel:" + rb.linearVelocity);
         }
     }
 }
